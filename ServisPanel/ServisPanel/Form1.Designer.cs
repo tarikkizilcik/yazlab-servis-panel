@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBoxBody = new System.Windows.Forms.RichTextBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.textBoxType = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxAuthor
@@ -72,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 67);
+            this.label3.Location = new System.Drawing.Point(12, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 5;
@@ -80,10 +82,10 @@
             // 
             // richTextBoxBody
             // 
-            this.richTextBoxBody.Location = new System.Drawing.Point(61, 64);
+            this.richTextBoxBody.Location = new System.Drawing.Point(61, 90);
             this.richTextBoxBody.Name = "richTextBoxBody";
-            this.richTextBoxBody.Size = new System.Drawing.Size(211, 156);
-            this.richTextBoxBody.TabIndex = 6;
+            this.richTextBoxBody.Size = new System.Drawing.Size(211, 130);
+            this.richTextBoxBody.TabIndex = 3;
             this.richTextBoxBody.Text = "";
             // 
             // buttonSave
@@ -91,15 +93,33 @@
             this.buttonSave.Location = new System.Drawing.Point(197, 226);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 7;
+            this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // textBoxType
+            // 
+            this.textBoxType.Location = new System.Drawing.Point(61, 64);
+            this.textBoxType.Name = "textBoxType";
+            this.textBoxType.Size = new System.Drawing.Size(211, 20);
+            this.textBoxType.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Type";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxType);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.richTextBoxBody);
             this.Controls.Add(this.label3);
@@ -123,6 +143,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBoxBody;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.TextBox textBoxType;
+        private System.Windows.Forms.Label label4;
     }
 }
 
