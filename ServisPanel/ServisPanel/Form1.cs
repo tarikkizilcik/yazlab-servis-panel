@@ -2,12 +2,14 @@
 using System.Data;
 using System.IO;
 using System.Net;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ServisPanel
 {
     public partial class Form1 : Form
     {
+        private string imageFile;
         public Form1()
         {
             InitializeComponent();
@@ -26,9 +28,10 @@ namespace ServisPanel
                 var author = textBoxAuthor.Text;
                 var title = textBoxTitle.Text;
                 var body = richTextBoxBody.Text;
-                var type = textBoxType.Text;
+                var type = comboBoxType.Text;
+                var image = File.ReadAllBytes(imageFile);
 
-                var json = $"{{\"news\":{new News(author, title, body, type).ToJSON()}}}";
+                var json = $"{{\"news\":{new News(author, title, body, type, image).ToJSON()}}}";
 
                 streamWriter.Write(json);
                 streamWriter.Flush();
@@ -40,6 +43,15 @@ namespace ServisPanel
                 new StreamReader(httpResponse.GetResponseStream() ?? throw new NoNullAllowedException()))
             {
                 var result = streamReader.ReadToEnd();
+            }
+        }
+
+        private void linkLabelPicture_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imageFile = openFileDialog1.FileName;
+                pictureBox1.Image = Image.FromFile(imageFile);
             }
         }
     }

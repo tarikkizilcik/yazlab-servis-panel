@@ -28,123 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxAuthor = new System.Windows.Forms.TextBox();
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBoxBody = new System.Windows.Forms.RichTextBox();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxType = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxAuthor = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabelPicture = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBoxAuthor
-            // 
-            this.textBoxAuthor.Location = new System.Drawing.Point(61, 12);
-            this.textBoxAuthor.Name = "textBoxAuthor";
-            this.textBoxAuthor.Size = new System.Drawing.Size(211, 20);
-            this.textBoxAuthor.TabIndex = 0;
-            // 
-            // textBoxTitle
-            // 
-            this.textBoxTitle.Location = new System.Drawing.Point(61, 38);
-            this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(211, 20);
-            this.textBoxTitle.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(9, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Author";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Yazar";
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.Location = new System.Drawing.Point(61, 57);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(211, 20);
+            this.textBoxTitle.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(9, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Title";
+            this.label2.Text = "Başlık";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 93);
+            this.label3.Location = new System.Drawing.Point(9, 279);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Body";
+            this.label3.Text = "Icerik";
             // 
             // richTextBoxBody
             // 
-            this.richTextBoxBody.Location = new System.Drawing.Point(61, 90);
+            this.richTextBoxBody.Location = new System.Drawing.Point(12, 298);
             this.richTextBoxBody.Name = "richTextBoxBody";
-            this.richTextBoxBody.Size = new System.Drawing.Size(211, 130);
-            this.richTextBoxBody.TabIndex = 3;
+            this.richTextBoxBody.Size = new System.Drawing.Size(701, 312);
+            this.richTextBoxBody.TabIndex = 4;
             this.richTextBoxBody.Text = "";
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(197, 226);
+            this.buttonSave.Location = new System.Drawing.Point(333, 616);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 4;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.TabIndex = 5;
+            this.buttonSave.Text = "Yayınla";
             this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // textBoxType
-            // 
-            this.textBoxType.Location = new System.Drawing.Point(61, 64);
-            this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(211, 20);
-            this.textBoxType.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 67);
+            this.label4.Location = new System.Drawing.Point(12, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Type";
+            this.label4.Text = "Tür";
+            // 
+            // textBoxAuthor
+            // 
+            this.textBoxAuthor.Location = new System.Drawing.Point(61, 31);
+            this.textBoxAuthor.Name = "textBoxAuthor";
+            this.textBoxAuthor.Size = new System.Drawing.Size(211, 20);
+            this.textBoxAuthor.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(423, 255);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "BREAKING",
+            "ECONOMY",
+            "EDUCATION",
+            "FASHION",
+            "HEALTH",
+            "SPORT"});
+            this.comboBoxType.Location = new System.Drawing.Point(61, 83);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(211, 21);
+            this.comboBoxType.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.linkLabelPicture);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Location = new System.Drawing.Point(278, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 280);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Fotoğraf";
+            // 
+            // linkLabelPicture
+            // 
+            this.linkLabelPicture.AutoSize = true;
+            this.linkLabelPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabelPicture.Location = new System.Drawing.Point(116, 133);
+            this.linkLabelPicture.Name = "linkLabelPicture";
+            this.linkLabelPicture.Size = new System.Drawing.Size(203, 17);
+            this.linkLabelPicture.TabIndex = 3;
+            this.linkLabelPicture.TabStop = true;
+            this.linkLabelPicture.Text = "Fotoğraf eklemek için tıklayınız.";
+            this.linkLabelPicture.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelPicture_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(728, 650);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.comboBoxType);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxAuthor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxType);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.richTextBoxBody);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.textBoxAuthor);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Haber Ekleme Ekrani";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxAuthor;
         private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBoxBody;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBoxType;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxType;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.LinkLabel linkLabelPicture;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
