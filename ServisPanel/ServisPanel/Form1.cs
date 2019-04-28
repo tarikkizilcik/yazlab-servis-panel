@@ -14,6 +14,10 @@ namespace ServisPanel
         {
             InitializeComponent();
 
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "dd MM yyyy - HH:mm";
+            dateTimePicker.MaxDate = DateTime.Now;
+
             buttonSave.Click += ButtonSave_Click;
         }
 
@@ -29,9 +33,10 @@ namespace ServisPanel
                 var title = textBoxTitle.Text;
                 var body = richTextBoxBody.Text;
                 var type = comboBoxType.Text;
+                var publicationDate = ((DateTimeOffset) dateTimePicker.Value).ToUnixTimeMilliseconds();
                 var image = File.ReadAllBytes(imageFile);
 
-                var json = $"{{\"news\":{new News(author, title, body, type, image).ToJSON()}}}";
+                var json = $"{{\"news\":{new News(author, title, body, type, publicationDate, image).ToJSON()}}}";
 
                 streamWriter.Write(json);
                 streamWriter.Flush();

@@ -41,6 +41,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabelPicture = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,9 +58,9 @@
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Location = new System.Drawing.Point(61, 57);
+            this.textBoxTitle.Location = new System.Drawing.Point(78, 57);
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(211, 20);
+            this.textBoxTitle.Size = new System.Drawing.Size(194, 20);
             this.textBoxTitle.TabIndex = 1;
             // 
             // label2
@@ -92,14 +94,14 @@
             this.buttonSave.Location = new System.Drawing.Point(333, 616);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 5;
+            this.buttonSave.TabIndex = 6;
             this.buttonSave.Text = "Yayınla";
             this.buttonSave.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 86);
+            this.label4.Location = new System.Drawing.Point(9, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 9;
@@ -107,9 +109,9 @@
             // 
             // textBoxAuthor
             // 
-            this.textBoxAuthor.Location = new System.Drawing.Point(61, 31);
+            this.textBoxAuthor.Location = new System.Drawing.Point(78, 31);
             this.textBoxAuthor.Name = "textBoxAuthor";
-            this.textBoxAuthor.Size = new System.Drawing.Size(211, 20);
+            this.textBoxAuthor.Size = new System.Drawing.Size(194, 20);
             this.textBoxAuthor.TabIndex = 0;
             // 
             // pictureBox1
@@ -132,9 +134,9 @@
             "FASHION",
             "HEALTH",
             "SPORT"});
-            this.comboBoxType.Location = new System.Drawing.Point(61, 83);
+            this.comboBoxType.Location = new System.Drawing.Point(78, 83);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(211, 21);
+            this.comboBoxType.Size = new System.Drawing.Size(194, 21);
             this.comboBoxType.TabIndex = 2;
             // 
             // groupBox1
@@ -155,7 +157,7 @@
             this.linkLabelPicture.Location = new System.Drawing.Point(116, 133);
             this.linkLabelPicture.Name = "linkLabelPicture";
             this.linkLabelPicture.Size = new System.Drawing.Size(203, 17);
-            this.linkLabelPicture.TabIndex = 3;
+            this.linkLabelPicture.TabIndex = 5;
             this.linkLabelPicture.TabStop = true;
             this.linkLabelPicture.Text = "Fotoğraf eklemek için tıklayınız.";
             this.linkLabelPicture.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelPicture_LinkClicked);
@@ -164,11 +166,29 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(78, 110);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(194, 20);
+            this.dateTimePicker.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Yayımlanma";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 650);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.label1);
@@ -203,6 +223,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel linkLabelPicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Label label5;
     }
 }
 
