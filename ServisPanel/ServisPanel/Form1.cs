@@ -4,6 +4,8 @@ using System.IO;
 using System.Net;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace ServisPanel
 {
@@ -23,7 +25,7 @@ namespace ServisPanel
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            var httpWebRequest = (HttpWebRequest) WebRequest.Create("http://localhost:3000/api/news/add");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:3000/api/news/add");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
 
@@ -33,7 +35,7 @@ namespace ServisPanel
                 var title = textBoxTitle.Text;
                 var body = richTextBoxBody.Text;
                 var type = comboBoxType.Text;
-                var publicationDate = ((DateTimeOffset) dateTimePicker.Value).ToUnixTimeMilliseconds();
+                var publicationDate = ((DateTimeOffset)dateTimePicker.Value).ToUnixTimeMilliseconds();
                 var image = File.ReadAllBytes(imageFile);
 
                 var json = $"{{\"news\":{new News(author, title, body, type, publicationDate, image).ToJSON()}}}";
@@ -43,7 +45,7 @@ namespace ServisPanel
                 streamWriter.Close();
             }
 
-            var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (var streamReader =
                 new StreamReader(httpResponse.GetResponseStream() ?? throw new NoNullAllowedException()))
             {
@@ -64,6 +66,36 @@ namespace ServisPanel
         {
             var formTypes = new FormTypes();
             formTypes.ShowDialog();
+            GetNewsTypes();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            GetNewsTypes();
+        }
+
+        private void GetNewsTypes()
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:3000/api/news-types");
+            //httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "GET";
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader =
+                new StreamReader(httpResponse.GetResponseStream() ?? throw new NoNullAllowedException()))
+            {
+                var json = streamReader.ReadToEnd();
+
+                dynamic array = JsonConvert.DeserializeObject(json);
+                foreach (var item in array)
+                {
+                    var name = Convert.ToString(item.name);
+                    var items = comboBoxType.Items;
+
+                    if (!items.Contains(name))
+                        items.Add(name);
+                }
+            }
         }
     }
 }

@@ -131,13 +131,6 @@
             // 
             this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "BREAKING",
-            "ECONOMY",
-            "EDUCATION",
-            "FASHION",
-            "HEALTH",
-            "SPORT"});
             this.comboBoxType.Location = new System.Drawing.Point(78, 83);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(194, 21);
@@ -226,6 +219,7 @@
             this.Controls.Add(this.textBoxTitle);
             this.Name = "Form1";
             this.Text = "Haber Ekleme Ekrani";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
