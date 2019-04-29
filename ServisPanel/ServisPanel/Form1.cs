@@ -59,5 +59,11 @@ namespace ServisPanel
                 pictureBox1.Image = Image.FromFile(imageFile);
             }
         }
+
+        private void toolStripButtonTypes_Click(object sender, EventArgs e)
+        {
+            var formTypes = new FormTypes();
+            formTypes.ShowDialog();
+        }
     }
 }
